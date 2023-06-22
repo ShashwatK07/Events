@@ -2,8 +2,9 @@ import { NavLink } from "react-router-dom";
 
 import classes from "./MainNavigation.module.css";
 import NewsletterSignup from "./NewsletterSignup";
-
+import { Form } from "react-router-dom";
 function MainNavigation() {
+  
   return (
     <header className={classes.header}>
       <nav>
@@ -48,6 +49,11 @@ function MainNavigation() {
             >
               Authentication
             </NavLink>
+          </li>
+          <li>
+            <Form action="/logout" method="post">
+              <button>Log Out</button>
+            </Form>
           </li>
         </ul>
       </nav>
