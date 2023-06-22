@@ -12,7 +12,7 @@ export async function action({ request, params }) {
 
   const mode = searchParams.get("mode") || "login";
 
-  if (mode !== "login" || mode !== "signup") {
+  if (mode !== "login" && mode !== "signup") {
     throw json({ message: "Invalid mode." }, { status: 422 });
   }
 
